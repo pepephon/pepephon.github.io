@@ -1017,30 +1017,16 @@ Los primeros testeos con 15 personas en el centro de mayores de nuestro barrio m
       <p class="section-tag">06 — Vídeo Online</p>
       <h2 class="section-title">Vídeo del <span class="accent">Proyecto</span></h2>
     </div>
-    <div class="video-upload-zone reveal" style="transition-delay:.1s" onclick="document.getElementById('vid-input').click()">
-      <input type="file" id="vid-input" accept="video/*" onchange="handleVideo(this)">
-      <div class="video-icon">🎬</div>
-      <h3>Sube tu vídeo</h3>
-      <p>Arrastra aquí el archivo o <span>haz clic para seleccionar</span></p>
-      <p style="margin-top:8px;font-size:.78rem">MP4, MOV, AVI · Duración máx. 1 min 30 seg</p>
+    <div style="margin-top:40px;border-radius:var(--radius);overflow:hidden;background:var(--navy);box-shadow:0 24px 60px rgba(13,27,62,.2);" class="reveal" style="transition-delay:.1s">
+      <video controls style="width:100%;display:block;max-height:520px;" poster="">
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de vídeo.
+      </video>
     </div>
-    <div id="video-preview">
-      <video id="vid-player" controls></video>
-    </div>
-    <div class="video-specs reveal" style="transition-delay:.2s">
+    <div class="video-specs reveal" style="transition-delay:.2s;margin-top:24px">
       <div class="spec-pill">Duración: 1 minuto y medio</div>
       <div class="spec-pill">Tipología y técnicas libres</div>
       <div class="spec-pill">Insertado en la página web</div>
-    </div>
-    <div style="margin-top:32px" class="reveal" style="transition-delay:.3s">
-      <p style="font-size:.82rem;color:var(--muted);margin-bottom:12px">O pega el enlace del vídeo (YouTube, Vimeo…)</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <input id="vid-url" type="url" placeholder="https://youtube.com/watch?v=..." style="flex:1;min-width:260px;border:1.5px solid rgba(26,58,110,.15);border-radius:10px;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--text);background:var(--light);outline:none" oninput="previewUrlVideo(this.value)">
-        <button onclick="previewUrlVideo(document.getElementById('vid-url').value)" class="btn btn-primary" style="border-radius:10px;padding:12px 22px">Previsualizar</button>
-      </div>
-      <div id="vid-iframe-wrap" style="margin-top:20px;border-radius:var(--radius);overflow:hidden;display:none">
-        <iframe id="vid-iframe" width="100%" height="400" frameborder="0" allowfullscreen style="display:block"></iframe>
-      </div>
     </div>
   </div>
 </section>
